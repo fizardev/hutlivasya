@@ -17,7 +17,14 @@ $(document).ready(function(){
         $('#b7').animate({top:240, left: vw+150},500);
         $('#b8').animate({top:240, left: vw+250},500);
         $('#b9').animate({top:240, left: vw+350},500);
+
+        // Adjust font size of balloon letters for responsiveness
+        var fontSize = vw * 0.04; // Example: Adjust the multiplier as per your design
+        $('.balloons h2').css('font-size', fontSize + 'px');
     });
+
+    // Initial positioning and behavior
+    $(window).resize(); // Trigger resize initially
 
     $('#turn_on').click(function(){
         $('#bulb_yellow').addClass('bulb-glow-yellow');
